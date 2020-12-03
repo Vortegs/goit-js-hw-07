@@ -4,21 +4,11 @@ console.log(formName.value);
 
 
 
-   
-    formName.addEventListener('input', event => {
-    if (formName.value = ''){
-        stringOut.textContent = 'Незнакомец'
-}
-stringOut.textContent = '' ;
-stringOut.textContent += event.data
-})
+function event(event) {
 
-    
+    if (formName.value) {
+        stringOut.textContent = event.target.value
+    } else stringOut.textContent = 'незнакомец'
+};
 
-
-
-// if (event.data != ''){
-//     stringOut.textContent = '';
-//     stringOut.textContent += event.data);
-// }
-
+formName.addEventListener('input', event);
